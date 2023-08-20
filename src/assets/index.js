@@ -1,62 +1,44 @@
 import logo from "./logo.svg";
-import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
-import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
-import css from "./tech/css.png";
-import docker from "./tech/docker.png";
-import figma from "./tech/figma.png";
-import git from "./tech/git.png";
-import html from "./tech/html.png";
-import javascript from "./tech/javascript.png";
-import mongodb from "./tech/mongodb.png";
-import nodejs from "./tech/nodejs.png";
-import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
-import tailwind from "./tech/tailwind.png";
-import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
+import auto from "../assets/projects/auto.avif";
+import banco from "../assets/projects/banco_las_americas.avif";
+import hotel from "../assets/projects/hotel.avif";
+import pedido from "../assets/projects/pedido.avif";
+import vacaciones from "../assets/projects/vacaciones.avif";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import sound from "./sound.avif";
+import stop from "./stop.svg";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import facebook from "./social/facebook.avif";
+import instagram from "./social/instagram.avif";
+import youtube from "./social/youtube.avif";
+import tiktok from "./social/tiktok.avif";
+
+import projects_icon from "./projects_icon.png";
+import demos_icon from "./demos_icon.avif";
+
+import micro from "/micro.png";
+import perfil from "/perfil.jpg";
 
 export {
   logo,
-  backend,
-  creator,
-  mobile,
-  web,
-  github,
   menu,
   close,
-  css,
-  docker,
-  figma,
-  git,
-  html,
-  javascript,
-  mongodb,
-  nodejs,
-  reactjs,
-  redux,
-  tailwind,
-  typescript,
-  threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
+  sound,
+  stop,
+  auto,
+  banco,
+  hotel,
+  pedido,
+  vacaciones,
+  instagram,
+  facebook,
+  youtube,
+  tiktok,
+  projects_icon,
+  demos_icon,
+  micro,
+  perfil,
 };

@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from 'react'
+import {useEffect, useState} from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom'
 import { styles } from '../styles';
 import { navLinks } from '../constants';
@@ -26,15 +27,15 @@ const Navbar = () => {
           <img src = {logo}  alt = "logo" className='w-9 h-9 object-contain' />
           {/* Titulo debajo del logo */}
           <p className='text-white text-[18px] font-bold cursor-pointer flex'>
-            Paulo &nbsp; 
+            Cristina &nbsp; 
             <span className='sm:block hidden'>
-               | Salazar 
+               Granda 
             </span>
           </p>
           {/* Hasta aqui Se obtiene el Navbar */}
           </Link>
           {/* Acomodar en horizontal logo y menu */}
-          <ul className='list-none hidden sm:flex flex-row gap-10' >
+          <ul className='list-none hidden flex-row gap-10 lg:flex ' >
 
             {navLinks.map((link) =>(
               <li
@@ -43,7 +44,7 @@ const Navbar = () => {
                 // para que se iluminen los links
                 className={`${
                   active === link.title ? "text-white" : "text-secondary"} 
-                  hover:text-white text-[18px] font-medium cursor-pointer `} 
+                  hover:text-white text-[18px] font-medium cursor-pointer lg:text-[14px] xl:text-[18px]`} 
                 // active de link title
                 onClick={()=> setActive(link.title)}
               >
@@ -55,15 +56,13 @@ const Navbar = () => {
 
           {/* mobile navigation */}
           {/* Setear el icono del menu en la esquina izquierda */}
-          <div className='sm:hidden flex flex-1 justify-end items-center'>
+          <div className='flex flex-1 justify-end items-center md:flex lg:hidden'>
             <img
               src = {toggle? close : menu}
               alt='menu'
               className='w-[28px] h-[28px] object-contain cursor-pointer'
               onClick={() => setToggle(!toggle)}
             />
-
-
             <div className={`${
               !toggle ? 'hidden' : 'flex' } 
               p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>

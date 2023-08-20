@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 // internal imports
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
+import { MicrophoneCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
@@ -40,9 +40,9 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Paulo",
+          to_name: "Cristina Granda",
           from_email: form.email,
-          to_email: "pauloiisalazar@gmail.com",
+          to_email: "cristinagranda.locutora@gmail.com",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -50,7 +50,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you ^_^. I will get back to you as soon as possible.");
+          alert("Gracias por tu mensaje, pronto nos pondremos en contacto contigo.");
 
           setForm({
             name: "",
@@ -62,7 +62,7 @@ const Contact = () => {
           setLoading(false);
           console.error(error);
 
-          alert("Ahh, something went wrong. Please try again.");
+          alert("Ahh, algo salio mal.Por favor vuelva a intentar.");
         }
       );
   };
@@ -76,12 +76,13 @@ const Contact = () => {
      
       <motion.div
       // para que la plantilla de about entre por la izquierda y tipo de animacion tween 
-        variants={slideIn("left", "tween", 0.2, 1)}
+        variants={slideIn("left", "tween", 0.2, 0.65)}
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
       >
         {/* created the basis of the div, slide  */}
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <p className={styles.sectionSubText}>Ponerse en Contacto</p>
+        <h3 className={styles.sectionHeadText}>Contacto</h3>
+        <p className={styles.sectionSubText2}>Describe tu proyecto en el formulario para recibir una cotización personalizada o me puedes escribir directo a cristinagranda.locutora@gmail.com</p>
 
         {/* create a form */}
         <form
@@ -91,39 +92,39 @@ const Contact = () => {
         >
           {/* name section */}
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
+            <span className='text-white font-medium mb-4'>Tu Nombre</span>
             <input
               type='text'
               name='name'
               value={form.name}
               onChange={handleChange}
-              placeholder="What's your good name?"
+              placeholder="¿Cuál es tu nombre?"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
 
           {/* email section */}
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your email</span>
+            <span className='text-white font-medium mb-4'>Tu email</span>
             <input
               type='email'
               name='email'
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your web address?"
+              placeholder="¿Cuál es tu Email?"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
 
           {/* query section */}
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
+            <span className='text-white font-medium mb-4'>Tu Mensaje</span>
             <textarea
               rows={7}
               name='message'
               value={form.message}
               onChange={handleChange}
-              placeholder='What do you want to say?'
+              placeholder='¿Que deseas decirme?'
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
@@ -133,7 +134,7 @@ const Contact = () => {
             type='submit'
             className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
           >
-            {loading ? "Sending..." : "Send"}
+            {loading ? "Enviando..." : "Enviar"}
           </button>
 
         </form>
@@ -143,10 +144,10 @@ const Contact = () => {
       
       <motion.div
         // planeta entre por la derecha
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
+        variants={slideIn("right", "tween", 0.2, 0.65)}
+        className='xl:flex-1 xl:h-auto md:h-[550px] h-[475px]'
       >
-        <EarthCanvas />
+        <MicrophoneCanvas />
       </motion.div>
 
 
@@ -154,4 +155,4 @@ const Contact = () => {
   )
 }
 
-export default SectionWrapper(Contact, "contact");
+export default SectionWrapper(Contact, "contactame");

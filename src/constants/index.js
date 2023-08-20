@@ -1,265 +1,231 @@
+// de index.css los text gradient
 import {
-    mobile,
-    backend,
-    creator,
-    web,
-    javascript,
-    typescript,
-    html,
-    css,
-    reactjs,
-    redux,
-    tailwind,
-    nodejs,
-    mongodb,
-    git,
-    figma,
-    docker,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
-    carrent,
-    jobit,
-    tripguide,
-    threejs,
+    auto,
+    banco,
+    hotel,
+    pedido,
+    vacaciones,
+    instagram,
+    facebook,
+    youtube,
+    tiktok,
+    projects_icon,
+    demos_icon,
+    micro,
+    perfil,
   } from "../assets";
-  
+
   export const navLinks = [
     {
-      id: "about",
-      title: "About",
+      id: "sobre-mi",
+      title: "Sobre mí",
     },
     {
-      id: "work",
-      title: "Work",
+      id: "entonaciones",
+      title: "Entonaciones",
     },
     {
-      id: "contact",
-      title: "Contact",
+      id: "demos",
+      title: "Demos",
+    },
+    {
+      id: "entrega",
+      title: "Entrega de Voz en Off",
+    },
+    {
+      id: "contactame",
+      title: "Contactame",
     },
   ];
   
   const services = [
     {
-      title: "Web Developer",
-      icon: web,
+      title: "Proyectos",
+      icon: projects_icon,
+      link_page: "entonaciones",
     },
     {
-      title: "React Native Developer",
-      icon: mobile,
+      title: "Demos",
+      icon: demos_icon,
+      link_page: "demos",
+    },
+  ];
+
+  const social_media = [
+    {
+      title: "Instagram",
+      icon: instagram,
+      social_link: "https://instagram.com/cristinagrandapty?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
     },
     {
-      title: "Backend Developer",
-      icon: backend,
+      title: "Facebook",
+      icon: facebook,
+      social_link: "https://www.facebook.com/cristinagrandapty?mibextid=9R9pXO",
     },
     {
-      title: "Content Creator",
-      icon: creator,
+      title: "Youtube",
+      icon: youtube,
+      social_link: "https://youtube.com/@cristinagrandapty-locutora4897",
+    },
+    {
+      title: "Tik Tok",
+      icon: tiktok,
+      social_link: "https://www.tiktok.com/@cristinagrandapty?_t=8enLQxj7MIP&_r=1",
     },
   ];
   
-  const technologies = [
+  const projects_info = [
     {
-      name: "HTML 5",
-      icon: html,
+      title: "Recibido el Brief, máximo de 24 horas.",
+      points: [],
     },
     {
-      name: "CSS 3",
-      icon: css,
-    },
-    {
-      name: "JavaScript",
-      icon: javascript,
-    },
-    {
-      name: "TypeScript",
-      icon: typescript,
-    },
-    {
-      name: "React JS",
-      icon: reactjs,
-    },
-    {
-      name: "Redux Toolkit",
-      icon: redux,
-    },
-    {
-      name: "Tailwind CSS",
-      icon: tailwind,
-    },
-    {
-      name: "Node JS",
-      icon: nodejs,
-    },
-    {
-      name: "MongoDB",
-      icon: mongodb,
-    },
-    {
-      name: "Three JS",
-      icon: threejs,
-    },
-    {
-      name: "git",
-      icon: git,
-    },
-    {
-      name: "figma",
-      icon: figma,
-    },
-    {
-      name: "docker",
-      icon: docker,
-    },
-  ];
-  
-  const experiences = [
-    {
-      title: "React.js Developer",
-      company_name: "Starbucks",
-      icon: starbucks,
-      iconBg: "#383E56",
-      date: "March 2020 - April 2021",
+      title: "Estilos y Acentos:",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Comercial, Institucional, Promocional, Narrativo, Corporativo,   IVR",
+        "*Español-Neutro    *Español-Latam ",
       ],
     },
     {
-      title: "React Native Developer",
-      company_name: "Tesla",
-      icon: tesla,
-      iconBg: "#E6DEDD",
-      date: "Jan 2021 - Feb 2022",
+      title: "Envío de trabajo y formatos:",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "El archivo de audio se entregará, vía email o descarga directa desde un servidor/transfer.",
       ],
     },
     {
-      title: "Web Developer",
-      company_name: "Shopify",
-      icon: shopify,
-      iconBg: "#383E56",
-      date: "Jan 2022 - Jan 2023",
+      title: "Archivo/ formato:",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "wav / 48.100 hz - 24 bits / mono",
+        "mp3 / 44.100 hz -16 bits / mono (320 kpbs)",
       ],
     },
     {
-      title: "Full stack Developer",
-      company_name: "Meta",
-      icon: meta,
-      iconBg: "#E6DEDD",
-      date: "Jan 2023 - Present",
+      title: "Forma de pago:",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "PayPal, Transf. Banco",
+      ],
+    },
+    {
+      title: "Horarios: ",
+      points: [
+        "Lunes a Viernes  08:00 - 20:00",
+        "Sábados   08:00 - 14:00",
+        "Uso Horario PTY (UTC-5)",
       ],
     },
   ];
-  
-  const testimonials = [
-    {
-      testimonial:
-        "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-      name: "Sara Lee",
-      designation: "CFO",
-      company: "Acme Co",
-      image: "https://randomuser.me/api/portraits/women/4.jpg",
-    },
-    {
-      testimonial:
-        "I've never met a web developer who truly cares about their clients' success like Rick does.",
-      name: "Chris Brown",
-      designation: "COO",
-      company: "DEF Corp",
-      image: "https://randomuser.me/api/portraits/men/5.jpg",
-    },
-    {
-      testimonial:
-        "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-      name: "Lisa Wang",
-      designation: "CTO",
-      company: "456 Enterprises",
-      image: "https://randomuser.me/api/portraits/women/6.jpg",
-    },
-  ];
-  
+
   const projects = [
     {
-      name: "Car Rent",
-      description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      name: "Voz Institucional",
+      description: [
+        "Sumérjase en la autoridad y profesionalismo que su marca merece con mi voz institucional. ",
+        // "Cautivo con tonos firmes y seguros que reflejan confianza y experiencia.",
+        // "Desde anuncios corporativos hasta presentaciones ejecutivas, mi voz institucional establecerá un tono convincente que dejará una impresión duradera en su audiencia.",
+      ],
       tags: [
         {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "mongodb",
+          name: "Comercial",
           color: "green-text-gradient",
         },
-        {
-          name: "tailwind",
-          color: "pink-text-gradient",
-        },
       ],
-      image: carrent,
-      source_code_link: "https://github.com/",
+      image: auto,
+      audio_link: "/audio/voz_institucional.mp3",
+      demo: "Voz Comercial",
     },
     {
-      name: "Job IT",
-      description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      name: "Voz Amigable",
+      description: [
+        "Establezca una conexión amigable y cercana con su audiencia a través de mi voz cálida y acogedora. ",
+        // "Como si charlara con un viejo amigo, mi estilo amigable brinda calidez y familiaridad a cada palabra. Utilícelo en comerciales que buscan construir relaciones sólidas con los clientes, brindando un toque humano a su marca.",
+      ],
       tags: [
         {
-          name: "react",
+          name: "Amigable",
           color: "blue-text-gradient",
-        },
-        {
-          name: "restapi",
-          color: "green-text-gradient",
-        },
-        {
-          name: "scss",
-          color: "pink-text-gradient",
-        },
+        }
       ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+      image: banco,
+      audio_link: "/audio/voz_amigable.mp3",
+      demo: "Voz E-Learning",
     },
     {
-      name: "Trip Guide",
-      description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      name: "Voz Sensual",
+      description: [
+          "Despierte los sentidos de su audiencia con mi voz sensual y seductora.",
+          // "Cada palabra se teje con elegancia y pasión, creando una conexión íntima con quienes escuchan.",
+          // "Ideal para comerciales de moda, fragancias y experiencias sensoriales, mi voz sensual evoca emociones profundas y crea un ambiente cautivador.",
+      ],
       tags: [
         {
-          name: "nextjs",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "supabase",
-          color: "green-text-gradient",
-        },
-        {
-          name: "css",
+          name: "Sensual",
           color: "pink-text-gradient",
         },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      image: hotel,
+      audio_link: "/audio/voz_sensual.mp3",
+      demo: "Voz Sensual",
+    },
+    {
+      name: "Voz Promocional",
+      description: [
+        "Eleva el impacto de tus productos con mi voz promocional, dinámica y persuasiva. ",
+        // "Cada palabra se infunde con energía y entusiasmo, creando un llamado a la acción irresistible para tu audiencia.",
+        // "Desde ofertas especiales hasta lanzamientos de productos, mi voz agrega un toque de emoción y urgencia que impulsará las conversiones.",
+      ],
+      tags: [
+        {
+          name: "Promoción",
+          color: "red-text-gradient",
+        }
+      ],
+      image: pedido,
+      audio_link: "/audio/voz_promocional.mp3",
+      demo: "Voz Promocional",
+    },
+    {
+      name: "Voz Alegre",
+      description: [
+        " Establezca una conexión amigable y cercana con su audiencia a través de mi voz cálida y acogedora. ",
+        // "Como si charlara con un viejo amigo, mi estilo amigable brinda calidez y familiaridad a cada palabra.",
+        // "Utilícelo en comerciales que buscan construir relaciones sólidas con los clientes, brindando un toque humano a su marca.",
+      ],
+      tags: [
+        {
+          name: "Alegre",
+          color: "orange-text-gradient",
+        }
+      ],
+      image: vacaciones,
+      audio_link: "/audio/voz_alegre.mp3",
+      demo: "Voz Alegre",
     },
   ];
   
-  export { services, technologies, experiences, testimonials, projects };
+  const Audios = [
+    {
+      nombre: "Demo Comercial",
+      path: "/audio/demo_comercial.mp3",
+    },
+    {
+      nombre: "Demo General",
+      path: "/audio/demo_general.aac",
+    },
+    {
+      nombre: "Demo E-Learning & Corporativo",
+      path: "/audio/demo_eLearning.aac",
+    },
+    {
+      nombre: "Demo Contestadora IVR Bilingue(Español)",
+      path: "/audio/demo_contestadoraEspanol.mp3",
+    },
+    {
+      nombre: "Demo Contestadora IVR Bilingue(Ingles)",
+      path: "/audio/demo_contestadoraIngles.aac",
+    },   
+    {
+      nombre: "Demo Narración",
+      path: "/audio/demo_narracion.mp3",
+    },   
+  ];
+  export { services, projects, projects_info, Audios, social_media, micro, perfil };

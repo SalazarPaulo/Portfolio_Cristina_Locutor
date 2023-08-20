@@ -1,8 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+
   content: ["./src/**/*.{js,jsx}"],
   mode: "jit",
   theme: {
+    fontFamily: {
+      "vibe": ['Great Vibes'],
+    },
     extend: {
       colors: {
         primary: "#050816",
@@ -20,6 +24,15 @@ module.exports = {
       },
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.png')",
+      },
+      transform: {
+        "perspective-rotate-0": "perspective(500px) rotateY(180deg)",
+        "perspective-rotate-180": "perspective(500px) rotateY(180deg)",
+        "perspective-rotate-360": "perspective(500px) rotateY(260deg)",
+      },
+      backfaceVisibility: {
+        visible: 'visible',
+        hidden: 'hidden',
       },
     },
   },
