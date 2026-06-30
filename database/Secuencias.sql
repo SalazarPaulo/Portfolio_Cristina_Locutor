@@ -1,0 +1,74 @@
+/************AUDIO***************/
+CREATE SEQUENCE seq_audio START WITH 1 INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER tr_audio
+BEFORE INSERT ON Audio
+FOR EACH ROW
+BEGIN
+    SELECT seq_audio.NEXTVAL INTO :NEW.Id_Audio FROM DUAL;
+END;
+/
+/*************ICON********************/
+CREATE SEQUENCE seq_icon START WITH 1 INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER tr_icon
+BEFORE INSERT ON Icon
+FOR EACH ROW
+BEGIN
+    SELECT seq_icon.NEXTVAL INTO :NEW.Id_Icon FROM DUAL;
+END;
+/
+/****************IMAGE**********************/
+CREATE SEQUENCE seq_image START WITH 1 INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER tr_image
+BEFORE INSERT ON Image
+FOR EACH ROW
+BEGIN
+    SELECT seq_image.NEXTVAL INTO :NEW.Id_Image FROM DUAL;
+END;
+/
+/****************SUBTYPE_DRESCRIPTION***************/
+CREATE SEQUENCE seq_subtype_description START WITH 1 INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER tr_subtype_description
+BEFORE INSERT ON Subtype_Description
+FOR EACH ROW
+BEGIN
+    SELECT seq_subtype_description.NEXTVAL INTO :NEW.Id_Subtype FROM DUAL;
+END;
+/
+/***************DEMOS************************/
+CREATE SEQUENCE seq_demos START WITH 1 INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER tr_demos
+BEFORE INSERT ON Demos
+FOR EACH ROW
+BEGIN
+    SELECT seq_demos.NEXTVAL INTO :NEW.Id_Demos FROM DUAL;
+END;
+/
+/*****************IMAGE3D*******************/
+CREATE SEQUENCE seq_image3d START WITH 1 INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER tr_image3d
+BEFORE INSERT ON Image3D
+FOR EACH ROW
+BEGIN
+    SELECT seq_image3d.NEXTVAL INTO :NEW.Id_Image3D FROM DUAL;
+END;
+/
+/*****************MEDIA*******************/
+-- Secuencia para Media
+CREATE SEQUENCE seq_media
+START WITH 1
+INCREMENT BY 1;
+
+-- Trigger para Media
+CREATE OR REPLACE TRIGGER tr_media
+BEFORE INSERT ON Media
+FOR EACH ROW
+BEGIN
+    SELECT seq_media.NEXTVAL INTO :NEW.Id_Media FROM DUAL;
+END;
+/
