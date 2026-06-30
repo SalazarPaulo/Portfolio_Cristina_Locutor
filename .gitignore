@@ -2,11 +2,6 @@
 .DS_Store
 Thumbs.db
 
-# Secretos en cualquier módulo
-.env
-.env.*
-!.env.example
-
 # Respaldos y exportaciones de base de datos
 database/*.dmp
 database/*.dump
