@@ -1,3 +1,0 @@
-
-$ mvn install:install-file -Dfile=C:/Maven-3.8.6/ojdbc11.jar -DgroupId=com.oracle 
-	-DartifactId=ojdbc11 -Dversion=21.3 -Dpackaging=jar
