@@ -1,976 +1,404 @@
-# 🎙️ Portfolio Cristina Granda Voice over
+# Portfolio Cristina Granda — Voice Over Platform
 
-![React](https://img.shields.io/badge/React-18.2.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Vite](https://img.shields.io/badge/Vite-4.3.9-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3.3-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Three.js](https://img.shields.io/badge/Three.js-0.155.0-000000?style=for-the-badge&logo=three.js&logoColor=white)
+![React](https://img.shields.io/badge/React-18.2.0-61DAFB?style=for-the-badge\&logo=react\&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-4.3.9-646CFF?style=for-the-badge\&logo=vite\&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3.3-38B2AC?style=for-the-badge\&logo=tailwindcss\&logoColor=white)
+![Three.js](https://img.shields.io/badge/Three.js-0.155.0-000000?style=for-the-badge\&logo=three.js\&logoColor=white)
 ![Framer Motion](https://img.shields.io/badge/Framer%20Motion-10.15.0-ff69b4?style=for-the-badge)
-![EmailJS](https://img.shields.io/badge/EmailJS-Contact%20Form-5C32B7?style=for-the-badge)
+![EmailJS](https://img.shields.io/badge/EmailJS-3.11.0-5C32B7?style=for-the-badge)
+![Java](https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge\&logo=openjdk\&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.0-6DB33F?style=for-the-badge\&logo=springboot\&logoColor=white)
+![Oracle Database](https://img.shields.io/badge/Oracle%20Database-21c%20XE-F80000?style=for-the-badge\&logo=oracle\&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-En%20desarrollo-5C32B7?style=for-the-badge)
 
-**Portfolio Cristina Granda Locutor** es un portafolio web profesional desarrollado para presentar los servicios de locución de **Cristina Granda**, una locutora con demos de voz, estilos de entonación, información de entrega de trabajos, redes sociales y formulario de contacto.
+Aplicación web full-stack desarrollada para presentar los servicios profesionales de locución de **Cristina Granda**. El proyecto integra un frontend interactivo con demos de audio, elementos 3D, animaciones, formulario de contacto y una arquitectura preparada para consumir una API REST conectada a Oracle Database.
 
-El proyecto fue desarrollado con **React + Vite**, estilizado con **Tailwind CSS**, animado con **Framer Motion**, enriquecido con elementos 3D mediante **Three.js / React Three Fiber**, y conectado a un formulario funcional usando **EmailJS**.
+> **Estado actual:** el frontend está funcional y desplegado de forma independiente; el backend Spring Boot y los scripts de Oracle se incorporaron al repositorio para completar la arquitectura full-stack e integrar los datos dinámicos en una siguiente fase.
 
-<p align="center">
-  <img src="./public/perfil.jpg" width="280px" alt="Cristina Granda Perfil"/>
-</p>
+## Características principales
 
----
+* Portafolio profesional responsive para escritorio, tablet y móvil.
+* Demos de locución comercial, institucional, promocional, amigable, sensual, alegre, e-learning, IVR y narración.
+* Reproductores HTML5 para muestras de audio.
+* Modelo 3D de micrófono y fondo de estrellas con Three.js.
+* Animaciones y transiciones con Framer Motion.
+* Formulario de contacto integrado con EmailJS.
+* API REST desarrollada con Spring Boot.
+* Persistencia de datos mediante Spring Data JPA y Oracle Database.
+* Scripts SQL para crear usuario, tablas, relaciones, secuencias, triggers y datos iniciales.
 
-## 🌐 Demo
-
-Puedes visitar el sitio desde:
-
-```text
-https://cristinagranda.es/
-```
-
-También puede estar desplegado en:
+## Arquitectura general
 
 ```text
-https://cristinagrandapty.web.app/
+Usuario
+   │
+   ▼
+Frontend React + Vite
+   │
+   ├── Componentes visuales
+   ├── Audios e imágenes
+   ├── Modelo 3D
+   ├── Formulario EmailJS
+   └── Integración futura con API REST
+   │
+   ▼
+Backend Spring Boot
+   │
+   ├── Controladores REST
+   ├── Servicios
+   ├── Repositorios JPA
+   └── Entidades
+   │
+   ▼
+Oracle Database 21c XE
+   │
+   ├── Tablas relacionales
+   ├── Relaciones
+   ├── Secuencias
+   ├── Triggers
+   └── Datos iniciales
 ```
 
----
+## Tecnologías utilizadas
 
-## 📌 Tabla de contenido
+### Frontend
 
-- [Descripción](#-descripción)
-- [Características principales](#-características-principales)
-- [Tecnologías utilizadas](#-tecnologías-utilizadas)
-- [Capturas y recursos visuales](#-capturas-y-recursos-visuales)
-- [Estructura del proyecto](#-estructura-del-proyecto)
-- [Arquitectura interna](#-arquitectura-interna)
-- [Secciones principales](#-secciones-principales)
-- [Sistema de audios](#-sistema-de-audios)
-- [Modelo 3D y elementos visuales](#-modelo-3d-y-elementos-visuales)
-- [Formulario de contacto con EmailJS](#-formulario-de-contacto-con-emailjs)
-- [Animaciones](#-animaciones)
-- [SEO y metadatos](#-seo-y-metadatos)
-- [Cómo ejecutar el proyecto](#-cómo-ejecutar-el-proyecto)
-- [Variables de entorno](#-variables-de-entorno)
-- [Scripts disponibles](#-scripts-disponibles)
-- [Descripción técnica por archivo](#-descripción-técnica-por-archivo)
-- [Conceptos aplicados](#-conceptos-aplicados)
-- [Mejoras futuras](#-mejoras-futuras)
-- [Posibles mejoras técnicas](#-posibles-mejoras-técnicas)
-- [Autor](#-autor)
-- [Estado del proyecto](#-estado-del-proyecto)
+| Tecnología          | Versión | Propósito                                          |
+| ------------------- | ------: | -------------------------------------------------- |
+| React               |  18.2.0 | Construcción de la interfaz mediante componentes.  |
+| Vite                |   4.3.9 | Servidor de desarrollo y empaquetado del frontend. |
+| Tailwind CSS        |   3.3.3 | Estilos responsive y utilidades visuales.          |
+| Three.js            | 0.155.0 | Renderizado de escenas y elementos 3D.             |
+| React Three Fiber   |  8.13.6 | Integración declarativa de Three.js con React.     |
+| React Three Drei    |  9.80.0 | Utilidades para escenas 3D.                        |
+| Framer Motion       | 10.15.0 | Animaciones y transiciones de interfaz.            |
+| EmailJS             |  3.11.0 | Envío de formularios de contacto.                  |
+| React Router DOM    |  6.14.2 | Navegación del lado del cliente.                   |
+| React Parallax Tilt | 1.7.145 | Efecto visual tilt en tarjetas.                    |
+| HTML5 Audio         |       — | Reproducción de demos de voz.                      |
 
----
+### Backend
 
-## 📖 Descripción
+| Tecnología      |          Versión | Propósito                                              |
+| --------------- | ---------------: | ------------------------------------------------------ |
+| Java            |               17 | Lenguaje principal del backend.                        |
+| Spring Boot     |            3.2.0 | Framework para la API REST.                            |
+| Spring Web      |            3.2.0 | Creación de controladores y endpoints HTTP.            |
+| Spring Data JPA |            3.2.0 | Persistencia y acceso a datos.                         |
+| Hibernate       | Incluido por JPA | Mapeo objeto-relacional.                               |
+| HikariCP        |            5.1.0 | Gestión del pool de conexiones.                        |
+| Lombok          |         Incluido | Reducción de código repetitivo en entidades.           |
+| Maven Wrapper   |                — | Ejecución del proyecto sin instalar Maven globalmente. |
 
-Este proyecto es un portafolio web enfocado en servicios de **locución profesional**, diseñado para mostrar la marca personal de Cristina Granda y facilitar que potenciales clientes escuchen demos, conozcan sus estilos de voz y puedan contactarla directamente.
+### Base de datos
 
-El sitio presenta información sobre:
+| Tecnología                      |                   Versión | Propósito                                              |
+| ------------------------------- | ------------------------: | ------------------------------------------------------ |
+| Oracle Database Express Edition | 21c XE Release 21.0.0.0.0 | Motor de base de datos relacional.                     |
+| Oracle JDBC Driver              |    `ojdbc11` 23.3.0.23.09 | Conexión entre Spring Boot y Oracle.                   |
+| SQL                             |                         — | Creación de estructuras, relaciones y datos iniciales. |
 
-- Locución comercial.
-- Locución institucional.
-- Voz amigable.
-- Voz sensual.
-- Voz promocional.
-- Voz alegre.
-- Demos generales de voz.
-- Demos comerciales.
-- Demos e-learning.
-- Demos de contestadora IVR bilingüe.
-- Narración.
-- Formatos de entrega.
-- Métodos de pago.
-- Horarios de atención.
-- Redes sociales.
-- Formulario de contacto.
+**Oracle JDBC Driver:** [Oracle JDBC Downloads](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html)
 
----
+## Paradigmas de programación aplicados
 
-## ✨ Características principales
+### Programación orientada a objetos
 
-- Sitio web desarrollado con **React**.
-- Empaquetado y servidor de desarrollo con **Vite**.
-- Diseño visual con **Tailwind CSS**.
-- Animaciones de entrada y transición con **Framer Motion**.
-- Modelo 3D de micrófono usando **Three.js** y **React Three Fiber**.
-- Efecto de estrellas en fondo 3D.
-- Navegación por secciones con `BrowserRouter`.
-- Menú responsive para escritorio y móvil.
-- Hero principal con imagen de perfil y demo de audio.
-- Sección “Sobre mí”.
-- Tarjetas interactivas con efecto tilt.
-- Sección de entonaciones con audios individuales.
-- Tabla/listado de demos de audio.
-- Controles de reproducción, tiempo y volumen.
-- Sección de entrega de voz en off.
-- Formulario de contacto conectado con EmailJS.
-- Footer con redes sociales.
-- Carga diferida de componentes con `React.lazy` y `Suspense`.
-- Metadatos SEO y Open Graph en `index.html`.
+El backend está desarrollado con Java y utiliza clases, interfaces, entidades, encapsulación y relaciones entre objetos para representar los recursos del sistema, como audios, imágenes, iconos, demos, redes sociales y subtipos.
 
----
+### Programación declarativa
 
-## 🛠️ Tecnologías utilizadas
+Spring Boot utiliza anotaciones como `@RestController`, `@Service`, `@Repository`, `@Entity`, `@Transactional` y `@GetMapping` para declarar el comportamiento de la aplicación sin escribir manualmente toda la infraestructura HTTP, transaccional y de persistencia.
 
-- **React**
-- **Vite**
-- **JavaScript**
-- **JSX**
-- **Tailwind CSS**
-- **PostCSS**
-- **Three.js**
-- **React Three Fiber**
-- **@react-three/drei**
-- **Framer Motion**
-- **EmailJS**
-- **React Router DOM**
-- **React Parallax Tilt**
-- **HTML5 Audio**
-- **CSS**
-- **GLTF 3D Model**
+### Programación funcional y declarativa en React
 
----
+El frontend utiliza componentes funcionales, hooks como `useState` y `useRef`, renderizado declarativo mediante JSX, renderizado de listas con `.map()` y carga diferida de componentes con `React.lazy` y `Suspense`.
 
-## 🖼️ Capturas y recursos visuales
+## Arquitecturas y patrones de diseño
 
-### Imagen de perfil
+### Arquitectura full-stack por capas
 
-<p align="center">
-  <img src="./public/perfil.jpg" width="280px" alt="Cristina Granda"/>
-</p>
+```text
+Presentación      → React + Vite
+API REST          → Spring Boot
+Lógica de negocio → Services
+Persistencia      → Spring Data JPA + Hibernate
+Base de datos     → Oracle Database 21c XE
+```
 
-Esta imagen se utiliza como recurso principal en la sección Hero para mostrar la identidad visual de Cristina Granda.
+### Arquitectura basada en componentes
 
----
+El frontend se organiza en componentes reutilizables, entre ellos:
 
-### Micrófono principal
+```text
+Navbar
+Hero
+About
+Contonations
+CardAudio
+Works
+Contact
+FooterWeb
+StarsCanvas
+MicrophoneCanvas
+```
 
-<p align="center">
-  <img src="./public/micro.png" width="220px" alt="Micrófono"/>
-</p>
+Cada componente tiene una responsabilidad específica, lo que facilita el mantenimiento, la reutilización y la escalabilidad de la interfaz.
 
-El micrófono funciona como elemento interactivo dentro del Hero. Al presionarlo, se reproduce un demo general de voz.
+### Patrón Controller–Service–Repository
 
----
+El backend está estructurado con una separación de responsabilidades:
 
-### Recursos de entonaciones
+```text
+Controller  → recibe solicitudes HTTP y devuelve respuestas.
+Service     → contiene la lógica de negocio.
+Repository  → consulta y persiste datos mediante JPA.
+Entity      → representa tablas y registros de Oracle.
+```
 
-| Voz Institucional | Voz Amigable |
-|------------------|--------------|
-| <img src="./src/assets/projects/auto.avif" width="300px" alt="Voz Institucional"/> | <img src="./src/assets/projects/banco_las_americas.avif" width="300px" alt="Voz Amigable"/> |
+### Repository Pattern
 
-| Voz Sensual | Voz Promocional |
-|------------|-----------------|
-| <img src="./src/assets/projects/hotel.avif" width="300px" alt="Voz Sensual"/> | <img src="./src/assets/projects/pedido.avif" width="300px" alt="Voz Promocional"/> |
+Los repositorios extienden `JpaRepository`, permitiendo realizar operaciones CRUD y consultas sobre las entidades sin implementar manualmente el acceso a datos.
 
-| Voz Alegre |
-|-----------|
-| <img src="./src/assets/projects/vacaciones.avif" width="300px" alt="Voz Alegre"/> |
+### Service Layer Pattern
 
----
+Las interfaces de servicio y sus implementaciones separan la lógica de negocio de los controladores REST y del acceso directo a la base de datos.
 
-### Iconos de redes sociales
+### Dependency Injection e Inversion of Control
 
-| Instagram | Facebook | YouTube | TikTok |
-|----------|----------|---------|--------|
-| <img src="./src/assets/social/instagram.avif" width="70px" alt="Instagram"/> | <img src="./src/assets/social/facebook.avif" width="70px" alt="Facebook"/> | <img src="./src/assets/social/youtube.avif" width="70px" alt="YouTube"/> | <img src="./src/assets/social/tiktok.avif" width="70px" alt="TikTok"/> |
+Spring Boot administra las dependencias mediante inyección con `@Autowired`, reduciendo el acoplamiento entre controladores, servicios y repositorios.
 
----
+### Higher-Order Component
 
-## 📁 Estructura del proyecto
+El componente `SectionWrapper` envuelve secciones del frontend para reutilizar comportamientos visuales, anclas y animaciones sin duplicar lógica.
+
+### Lazy Loading y Code Splitting
+
+React utiliza `React.lazy` y `Suspense` para cargar componentes pesados cuando son necesarios, reduciendo la carga inicial del sitio.
+
+## Estructura del repositorio
 
 ```text
 Portfolio_Cristina_Locutor/
 │
-├── README.md
-├── index.html
-├── package.json
-├── package-lock.json
-├── vite.config.js
-├── tailwind.config.js
-├── postcss.config.js
-├── .eslintrc.cjs
+├── frontend/                              # Aplicación React + Vite
+│   ├── public/                            # Audios, imágenes y modelo 3D
+│   │   ├── audio/
+│   │   └── condenser_microphone/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   │   └── canvas/
+│   │   ├── constants/
+│   │   ├── hoc/
+│   │   ├── utils/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── package.json
+│   ├── vite.config.js
+│   ├── tailwind.config.js
+│   └── .gitignore
+│
+├── backend/                               # API REST Spring Boot
+│   ├── .mvn/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/dev/locutor/portfolio/
+│   │   │   │   ├── controller/
+│   │   │   │   ├── entities/
+│   │   │   │   ├── repositories/
+│   │   │   │   └── services/
+│   │   │   └── resources/
+│   │   │       └── application.properties
+│   │   └── test/
+│   ├── pom.xml
+│   ├── mvnw
+│   ├── mvnw.cmd
+│   └── .gitignore
+│
+├── database/                              # Scripts Oracle
+│   ├── Usuario.sql
+│   ├── OracleBD.sql
+│   ├── Relaciones.sql
+│   ├── Secuencias.sql
+│   ├── Insert.sql
+│   └── Comandos.sql
+│
 ├── .gitignore
-│
-├── public/
-│   ├── perfil.jpg
-│   ├── micro.png
-│   │
-│   ├── audio/
-│   │   ├── demo_comercial.mp3
-│   │   ├── demo_contestadoraEspanol.mp3
-│   │   ├── demo_contestadoraIngles.aac
-│   │   ├── demo_eLearning.aac
-│   │   ├── demo_general.aac
-│   │   ├── demo_narracion.mp3
-│   │   ├── voz_alegre.mp3
-│   │   ├── voz_amigable.mp3
-│   │   ├── voz_institucional.mp3
-│   │   ├── voz_promocional.mp3
-│   │   └── voz_sensual.mp3
-│   │
-│   └── condenser_microphone/
-│       ├── license.txt
-│       ├── scene.bin
-│       └── scene.gltf
-│
-└── src/
-    ├── App.jsx
-    ├── App.css
-    ├── index.css
-    ├── main.jsx
-    ├── styles.js
-    │
-    ├── assets/
-    │   ├── Logo.png
-    │   ├── Logo.svg
-    │   ├── close.svg
-    │   ├── menu.svg
-    │   ├── stop.svg
-    │   ├── sound.avif
-    │   ├── demos_icon.avif
-    │   ├── projects_icon.png
-    │   ├── herobg.png
-    │   ├── index.js
-    │   │
-    │   ├── projects/
-    │   │   ├── auto.avif
-    │   │   ├── banco_las_americas.avif
-    │   │   ├── hotel.avif
-    │   │   ├── pedido.avif
-    │   │   └── vacaciones.avif
-    │   │
-    │   └── social/
-    │       ├── facebook.avif
-    │       ├── instagram.avif
-    │       ├── tiktok.avif
-    │       └── youtube.avif
-    │
-    ├── components/
-    │   ├── About.jsx
-    │   ├── CardAudio.jsx
-    │   ├── Contact.jsx
-    │   ├── Contonations.jsx
-    │   ├── FooterWeb.jsx
-    │   ├── Hero.jsx
-    │   ├── Loader.jsx
-    │   ├── Navbar.jsx
-    │   ├── Works.jsx
-    │   ├── index.js
-    │   │
-    │   └── canvas/
-    │       ├── Ball.jsx
-    │       ├── Microphone.jsx
-    │       ├── Stars.jsx
-    │       └── index.js
-    │
-    ├── constants/
-    │   └── index.js
-    │
-    ├── hoc/
-    │   ├── SectionWrapper.jsx
-    │   └── index.js
-    │
-    └── utils/
-        └── motion.js
+└── README.md
 ```
 
----
-
-## 🧩 Arquitectura interna
-
-El proyecto está organizado como una aplicación React modular.
-
-```text
-main.jsx
-   │
-   ▼
-App.jsx
-   │
-   ├── Navbar
-   ├── Hero
-   ├── About
-   ├── Contonations
-   ├── CardAudio
-   ├── Works
-   ├── Contact
-   ├── StarsCanvas
-   └── FooterWeb
-```
-
-El archivo `App.jsx` funciona como contenedor principal del sitio.  
-Desde ahí se renderizan las secciones principales y se cargan algunos componentes de forma diferida con `React.lazy`.
-
-```jsx
-const Contonations = lazy(() => import("./components/Contonations.jsx"));
-const Contact = lazy(() => import("./components/Contact.jsx"));
-const Works = lazy(() => import("./components/Works.jsx"));
-const CardAudio = lazy(() => import("./components/CardAudio.jsx"));
-const StarsCanvas = lazy(() => import("./components/canvas/Stars.jsx"));
-const FooterWeb = lazy(() => import("./components/FooterWeb.jsx"));
-```
-
-Esto permite que el sitio no cargue todos los componentes pesados al mismo tiempo, mejorando la organización y el rendimiento inicial.
-
----
-
-## 🧭 Secciones principales
-
-### Navbar
-
-El componente `Navbar.jsx` contiene la barra de navegación superior.
-
-Incluye enlaces hacia las secciones:
-
-```text
-Sobre mí
-Entonaciones
-Demos
-Entrega de Voz en Off
-Contactame
-```
-
-Estos enlaces se generan desde el arreglo `navLinks` definido en `src/constants/index.js`.
-
-También incluye un menú responsive para pantallas pequeñas, usando los iconos `menu.svg` y `close.svg`.
-
----
-
-### Hero
-
-El componente `Hero.jsx` representa la sección principal del sitio.
-
-Incluye:
-
-- Nombre de Cristina Granda.
-- Frase principal: “Tu mensaje, mi voz, tu éxito.”
-- Imagen de perfil.
-- Imagen de micrófono.
-- Reproducción de demo general al presionar el micrófono.
-- Botón visual de scroll hacia la siguiente sección.
-
-El audio se maneja mediante `useRef` y `useState`:
-
-```jsx
-const audioRef = useRef(null);
-const [isPlaying, setIsPlaying] = useState(false);
-```
-
-La función `playAudio()` reproduce el audio y actualiza el estado de reproducción.
-
----
-
-### About
-
-El componente `About.jsx` muestra la sección “Sobre mí”.
-
-Explica la propuesta de valor de Cristina Granda como voz para:
-
-- Publicidades.
-- Videos corporativos.
-- E-learning.
-- Páginas web.
-- Redes sociales.
-- Narraciones.
-- Documentales.
-- Audio-guías.
-
-También muestra tarjetas interactivas para acceder a las secciones de proyectos/entonaciones y demos.
-
----
-
-### Contonations
-
-El componente `Contonations.jsx` muestra los distintos estilos de voz.
-
-Los datos se cargan desde el arreglo `projects` en `src/constants/index.js`.
-
-Estilos disponibles:
-
-- Voz Institucional.
-- Voz Amigable.
-- Voz Sensual.
-- Voz Promocional.
-- Voz Alegre.
-
-Cada tarjeta contiene:
-
-- Imagen representativa.
-- Nombre de la entonación.
-- Descripción.
-- Etiqueta.
-- Audio demo reproducible.
-- Botón visual de sonido/pausa.
-
----
-
-### CardAudio
-
-El componente `CardAudio.jsx` muestra una lista de demos de audio.
-
-Los audios se cargan desde el arreglo `Audios` en `src/constants/index.js`.
-
-Demos disponibles:
-
-- Demo Comercial.
-- Demo General.
-- Demo E-Learning & Corporativo.
-- Demo Contestadora IVR Bilingüe en Español.
-- Demo Contestadora IVR Bilingüe en Inglés.
-- Demo Narración.
-
-Cada demo incluye:
-
-- Etiqueta del audio.
-- Reproductor HTML5.
-- Control de tiempo.
-- Control de volumen.
-- Botón Play/Pause.
-
----
-
-### Works
-
-El componente `Works.jsx` muestra la información de entrega de voz en off.
-
-Incluye detalles sobre:
-
-- Tiempo de entrega.
-- Estilos y acentos.
-- Envío de trabajo.
-- Formatos de archivo.
-- Formas de pago.
-- Horarios de atención.
-
-Esta información se obtiene desde el arreglo `projects_info`.
-
----
-
-### Contact
-
-El componente `Contact.jsx` contiene el formulario de contacto.
-
-Campos del formulario:
-
-- Nombre.
-- Email.
-- Mensaje.
-
-El envío se realiza con EmailJS:
-
-```jsx
-emailjs.send(
-  import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-  import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-  {
-    from_name: form.name,
-    to_name: "Cristina Granda",
-    from_email: form.email,
-    to_email: "cristinagranda.locutora@gmail.com",
-    message: form.message,
-  },
-  import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-)
-```
-
-También incluye un modelo 3D de micrófono mediante `MicrophoneCanvas`.
-
----
-
-### FooterWeb
-
-El componente `FooterWeb.jsx` muestra los derechos reservados y las redes sociales.
-
-Redes incluidas:
-
-- Instagram.
-- Facebook.
-- YouTube.
-- TikTok.
-
----
-
-## 🔊 Sistema de audios
-
-El proyecto utiliza archivos de audio almacenados en:
-
-```text
-public/audio/
-```
-
-Audios principales:
-
-| Archivo | Uso |
-|--------|-----|
-| `demo_comercial.mp3` | Demo comercial. |
-| `demo_general.aac` | Demo general. |
-| `demo_eLearning.aac` | Demo e-learning y corporativo. |
-| `demo_contestadoraEspanol.mp3` | Demo de contestadora IVR en español. |
-| `demo_contestadoraIngles.aac` | Demo de contestadora IVR en inglés. |
-| `demo_narracion.mp3` | Demo de narración. |
-| `voz_institucional.mp3` | Audio para tarjeta de voz institucional. |
-| `voz_amigable.mp3` | Audio para tarjeta de voz amigable. |
-| `voz_sensual.mp3` | Audio para tarjeta de voz sensual. |
-| `voz_promocional.mp3` | Audio para tarjeta de voz promocional. |
-| `voz_alegre.mp3` | Audio para tarjeta de voz alegre. |
-
-Los audios se reproducen usando etiquetas HTML5:
-
-```jsx
-<audio ref={audioRef} id={demo} preload="none">
-  <source src={audio_link} />
-</audio>
-```
-
-En la tabla de demos se utiliza:
-
-```jsx
-<audio
-  ref={audioRef}
-  src={path}
-  preload="auto"
-  controls
->
-  Your browser does not support the audio element.
-</audio>
-```
-
----
-
-## 🎤 Modelo 3D y elementos visuales
-
-El proyecto incluye un modelo 3D de micrófono ubicado en:
-
-```text
-public/condenser_microphone/
-```
-
-Archivos principales:
-
-```text
-scene.gltf
-scene.bin
-license.txt
-```
-
-Este modelo se usa en la sección de contacto mediante componentes de React Three Fiber y Drei.
-
-Además, el sitio incluye un fondo de estrellas en 3D mediante `StarsCanvas`.
-
----
-
-## 📩 Formulario de contacto con EmailJS
-
-El formulario utiliza la librería `@emailjs/browser` para enviar mensajes sin necesidad de un backend propio.
-
-Variables utilizadas:
-
-```text
-VITE_APP_EMAILJS_SERVICE_ID
-VITE_APP_EMAILJS_TEMPLATE_ID
-VITE_APP_EMAILJS_PUBLIC_KEY
-```
-
-El formulario envía:
-
-- Nombre del cliente.
-- Email del cliente.
-- Mensaje.
-- Destinatario: `cristinagranda.locutora@gmail.com`.
-
-Cuando el envío es correcto, se muestra el mensaje:
-
-```text
-Gracias por tu mensaje, pronto nos pondremos en contacto contigo.
-```
-
-Si ocurre un error, se muestra:
-
-```text
-Ahh, algo salio mal.Por favor vuelva a intentar.
-```
-
----
-
-## 🎞️ Animaciones
-
-El proyecto utiliza `framer-motion` para animaciones de entrada y transiciones.
-
-Las animaciones principales están definidas en:
-
-```text
-src/utils/motion.js
-```
-
-Funciones disponibles:
-
-- `textVariant`
-- `fadeIn`
-- `zoomIn`
-- `slideIn`
-- `staggerContainer`
-
-Ejemplo:
-
-```jsx
-export const fadeIn = (direction, type, delay, duration) => {
-  return {
-    hidden: {
-      x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
-      y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
-      opacity: 0,
-    },
-    show: {
-      x: 0,
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: type,
-        delay: delay,
-        duration: duration,
-        ease: "easeOut",
-      },
-    },
-  };
-};
-```
-
-Estas funciones se aplican a secciones, tarjetas, texto, formulario y elementos visuales.
-
----
-
-## 🔍 SEO y metadatos
-
-El archivo `index.html` contiene metadatos para mejorar la presentación del sitio en buscadores y redes sociales.
-
-Incluye:
-
-- `description`
-- `keywords`
-- `author`
-- `og:title`
-- `og:description`
-- `og:url`
-- `og:image`
-- `canonical`
-
-Ejemplo:
-
-```html
-<meta name="description" content="Descubre el increíble talento de Cristina Grande, una destacada locutora nacida en Panamá. Explora su portafolio de trabajos de locución que abarcan desde anuncios comerciales hasta narración corporativa." />
-```
-
-También define el título del sitio:
-
-```html
-<title>Cristina Granda</title>
-```
-
----
-
-## ▶️ Cómo ejecutar el proyecto
-
-### Requisitos previos
-
-Necesitas tener instalado:
-
-- Node.js.
-- npm.
-
----
+## Recursos administrados por la API
+
+| Recurso        | Endpoint        |
+| -------------- | --------------- |
+| Audios         | `/audio/list`   |
+| Demos          | `/demos/list`   |
+| Iconos         | `/icon/list`    |
+| Imágenes       | `/image/list`   |
+| Recursos 3D    | `/image3D/list` |
+| Redes sociales | `/media/list`   |
+| Subtipos       | `/subtype/list` |
+
+## Requisitos previos
+
+Para ejecutar el proyecto completo necesitas:
+
+* Git.
+* Node.js **16.18.0**.
+* npm.
+* Java **17**.
+* Oracle Database **21c Express Edition Release 21.0.0.0.0**.
+* Oracle SQL Developer, SQL*Plus o una herramienta compatible.
+* Acceso a Oracle JDBC Driver `ojdbc11`.
+
+## Instalación
 
 ### 1. Clonar el repositorio
 
 ```bash
 git clone https://github.com/SalazarPaulo/Portfolio_Cristina_Locutor.git
-```
-
----
-
-### 2. Entrar a la carpeta del proyecto
-
-```bash
 cd Portfolio_Cristina_Locutor
 ```
 
----
+### 2. Configurar la base de datos
 
-### 3. Instalar dependencias
-
-```bash
-npm install
-```
-
----
-
-### 4. Configurar variables de entorno
-
-Crea un archivo `.env` en la raíz del proyecto:
+Ejecuta los scripts SQL en este orden:
 
 ```text
+1. Usuario.sql
+2. OracleBD.sql
+3. Relaciones.sql
+4. Secuencias.sql
+5. Insert.sql
+```
+
+El archivo `Comandos.sql` contiene consultas de apoyo para revisar tablas, datos, secuencias y relaciones.
+
+### 3. Configurar el backend
+
+Revisa la configuración de conexión en:
+
+```text
+backend/src/main/resources/application.properties
+```
+
+Configura allí la URL, usuario y contraseña de tu instancia local de Oracle Database.
+
+Ejemplo de conexión local:
+
+```properties
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:xe
+spring.datasource.username=TU_USUARIO
+spring.datasource.password=TU_CONTRASENA
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+```
+
+### 4. Ejecutar el backend
+
+En Git Bash:
+
+```bash
+cd backend
+./mvnw spring-boot:run
+```
+
+En PowerShell:
+
+```powershell
+cd backend
+.\mvnw.cmd spring-boot:run
+```
+
+El backend se ejecuta en:
+
+```text
+http://localhost:7070
+```
+
+### 5. Ejecutar el frontend
+
+Desde la raíz del repositorio:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Vite mostrará una dirección local similar a:
+
+```text
+http://localhost:5173
+```
+
+> El comando correcto para iniciar este proyecto es `npm run dev`.
+> `npm star` no inicia la aplicación.
+
+### 6. Generar la compilación de producción
+
+```bash
+cd frontend
+npm run build
+```
+
+La versión compilada se crea en:
+
+```text
+frontend/dist/
+```
+
+## Scripts disponibles del frontend
+
+| Comando           | Descripción                                         |
+| ----------------- | --------------------------------------------------- |
+| `npm run dev`     | Inicia Vite en modo desarrollo.                     |
+| `npm run build`   | Genera la compilación optimizada de producción.     |
+| `npm run preview` | Previsualiza localmente el build generado.          |
+| `npm run lint`    | Ejecuta ESLint sobre los archivos JavaScript y JSX. |
+
+## Variables utilizadas por EmailJS
+
+El formulario de contacto utiliza las siguientes variables:
+
+```env
 VITE_APP_EMAILJS_SERVICE_ID=tu_service_id
 VITE_APP_EMAILJS_TEMPLATE_ID=tu_template_id
 VITE_APP_EMAILJS_PUBLIC_KEY=tu_public_key
 ```
 
----
-
-### 5. Ejecutar en modo desarrollo
-
-```bash
-npm run dev
-```
-
-Normalmente Vite mostrará una URL como:
+Estas variables se pueden colocar en:
 
 ```text
-http://localhost:5173/
+frontend/.env
 ```
 
----
+## Próximas mejoras
 
-### 6. Generar build de producción
+* Conectar el frontend React con los endpoints de Spring Boot mediante Axios o Fetch API.
+* Reemplazar los datos estáticos del frontend por información obtenida desde Oracle.
+* Implementar DTOs para separar entidades de respuestas HTTP.
+* Agregar validaciones y manejo global de errores en la API.
+* Limitar CORS a dominios autorizados.
+* Crear pruebas unitarias e integración para servicios, repositorios y controladores.
+* Incorporar autenticación para un futuro panel administrativo.
+* Desplegar backend y base de datos en un entorno de producción.
+* Agregar documentación interactiva con Swagger/OpenAPI.
+* Optimizar recursos multimedia, imágenes y audios.
 
-```bash
-npm run build
-```
-
----
-
-### 7. Previsualizar build
-
-```bash
-npm run preview
-```
-
----
-
-## 🔐 Variables de entorno
-
-El formulario de contacto depende de EmailJS.  
-Por eso se deben configurar las siguientes variables en un archivo `.env`:
-
-```text
-VITE_APP_EMAILJS_SERVICE_ID=
-VITE_APP_EMAILJS_TEMPLATE_ID=
-VITE_APP_EMAILJS_PUBLIC_KEY=
-```
-
-No se recomienda subir el archivo `.env` al repositorio.
-
----
-
-## 📜 Scripts disponibles
-
-Los scripts están definidos en `package.json`.
-
-| Script | Comando | Descripción |
-|-------|---------|-------------|
-| Desarrollo | `npm run dev` | Inicia el servidor de desarrollo con Vite. |
-| Build | `npm run build` | Genera los archivos optimizados para producción. |
-| Lint | `npm run lint` | Ejecuta ESLint sobre archivos JS y JSX. |
-| Preview | `npm run preview` | Previsualiza localmente el build de producción. |
-
----
-
-## 📦 Dependencias principales
-
-```json
-"dependencies": {
-  "@emailjs/browser": "^3.11.0",
-  "@react-three/drei": "^9.80.0",
-  "@react-three/fiber": "^8.13.6",
-  "framer-motion": "^10.15.0",
-  "react": "^18.2.0",
-  "react-dom": "^18.2.0",
-  "react-parallax-tilt": "^1.7.145",
-  "react-router": "^6.12.1",
-  "react-router-dom": "^6.14.2",
-  "react-three-fiber": "^6.0.13",
-  "react-vertical-timeline-component": "^3.6.0",
-  "three": "^0.155.0"
-}
-```
-
-Dependencias de desarrollo:
-
-```json
-"devDependencies": {
-  "@vitejs/plugin-react": "^4.0.0",
-  "autoprefixer": "^10.4.14",
-  "eslint": "^8.38.0",
-  "eslint-plugin-react": "^7.32.2",
-  "eslint-plugin-react-hooks": "^4.6.0",
-  "eslint-plugin-react-refresh": "^0.3.4",
-  "postcss": "^8.4.27",
-  "postcss-cli": "^10.1.0",
-  "tailwindcss": "^3.3.3",
-  "vite": "^4.3.9"
-}
-```
-
----
-
-## 📦 Descripción técnica por archivo
-
-| Archivo | Función |
-|--------|---------|
-| `index.html` | Documento HTML principal, metadatos SEO y entrada del sitio. |
-| `package.json` | Define dependencias y scripts del proyecto. |
-| `vite.config.js` | Configuración de Vite con plugin React. |
-| `tailwind.config.js` | Configuración de Tailwind, colores, fuentes, fondo y tamaños responsive. |
-| `postcss.config.js` | Configuración de PostCSS. |
-| `src/main.jsx` | Punto de entrada de React. |
-| `src/App.jsx` | Componente principal que organiza todas las secciones. |
-| `src/index.css` | Estilos globales, gradientes, fuentes y utilidades CSS. |
-| `src/styles.js` | Constantes de estilos reutilizables. |
-| `src/constants/index.js` | Datos del sitio: navegación, servicios, entonaciones, demos, redes sociales y entrega. |
-| `src/components/Navbar.jsx` | Barra de navegación responsive. |
-| `src/components/Hero.jsx` | Sección principal con título, perfil, micrófono y demo. |
-| `src/components/About.jsx` | Sección de presentación personal y tarjetas de acceso. |
-| `src/components/Contonations.jsx` | Sección de entonaciones con tarjetas y audios. |
-| `src/components/CardAudio.jsx` | Tabla/listado de demos con controles de audio. |
-| `src/components/Works.jsx` | Información de entrega de voz en off. |
-| `src/components/Contact.jsx` | Formulario de contacto con EmailJS y canvas 3D. |
-| `src/components/FooterWeb.jsx` | Footer con redes sociales. |
-| `src/components/Loader.jsx` | Loader para escenas 3D. |
-| `src/components/canvas/Microphone.jsx` | Canvas 3D del micrófono. |
-| `src/components/canvas/Stars.jsx` | Fondo 3D de estrellas. |
-| `src/components/canvas/Ball.jsx` | Componente canvas reutilizable para elementos 3D. |
-| `src/hoc/SectionWrapper.jsx` | HOC para envolver secciones con animaciones y anclas. |
-| `src/utils/motion.js` | Variantes de animación reutilizables. |
-| `src/assets/index.js` | Archivo centralizador de imágenes e iconos. |
-
----
-
-## 🧠 Conceptos aplicados
-
-Este proyecto aplica varios conceptos importantes del desarrollo web moderno:
-
-- Componentización con React.
-- Uso de hooks como `useState`, `useRef` y `lazy`.
-- Carga diferida de componentes con `React.lazy`.
-- Uso de `Suspense`.
-- Navegación interna con anclas.
-- Estructura modular por componentes.
-- Renderizado de listas con `.map()`.
-- Manejo de audios con referencias.
-- Reproductores HTML5.
-- Control de estado para play/pause.
-- Animaciones declarativas con Framer Motion.
-- Diseño responsive con Tailwind CSS.
-- Efectos visuales con React Parallax Tilt.
-- Escenas 3D con React Three Fiber.
-- Modelo GLTF de micrófono.
-- Formulario de contacto con EmailJS.
-- Uso de variables de entorno.
-- SEO básico con metadatos.
-- Organización de recursos multimedia en `public/`.
-
----
-
-## 🚧 Mejoras futuras
-
-Algunas mejoras que se pueden implementar son:
-
-- Agregar capturas reales del sitio en el README.
-- Agregar una sección de testimonios.
-- Agregar sección de clientes o marcas.
-- Agregar botón directo de WhatsApp.
-- Agregar selector de idioma español/inglés.
-- Agregar página dedicada para cada demo.
-- Agregar reproductor de audio más personalizado.
-- Agregar barra visual de progreso para cada demo.
-- Agregar pausa automática cuando otro audio comienza a reproducirse.
-- Agregar validación visual del formulario.
-- Agregar mensajes de error debajo de cada campo.
-- Agregar protección anti-spam o CAPTCHA.
-- Mejorar accesibilidad con etiquetas `aria-label`.
-- Agregar pruebas básicas.
-- Mejorar SEO con imágenes Open Graph absolutas.
-- Agregar sitemap y robots.txt.
-- Optimizar imágenes y audios para carga rápida.
-
----
-
-## 🔍 Posibles mejoras técnicas
-
-Además de las mejoras funcionales, se pueden revisar estos puntos:
-
-- Corregir en `Hero.jsx` la ruta del audio:
-
-```jsx
-<source src="public/audio/demo_general.aac" />
-```
-
-En Vite normalmente debería usarse una ruta desde `public` así:
-
-```jsx
-<source src="/audio/demo_general.aac" />
-```
-
-- Revisar el import en `src/assets/index.js`, ya que aparece:
-
-```js
-import logo from "./logo.svg";
-```
-
-pero en la estructura del proyecto el archivo visible es:
-
-```text
-Logo.svg
-```
-
-En algunos sistemas, especialmente Linux y despliegues web, las mayúsculas y minúsculas importan.
-
-- Verificar que `Logo.png`, `Logo.svg` y las rutas importadas coincidan exactamente con sus nombres reales.
-- Evitar tener al mismo tiempo `react-three-fiber` y `@react-three/fiber` si no ambos son necesarios.
-- Agregar archivo `.env.example` para documentar las variables de EmailJS.
-- Agregar manejo visual de carga para `Suspense`.
-- Agregar `fallback` personalizado en lugar de `fallback={null}`.
-- Optimizar archivos de audio para reducir peso.
-- Agregar lazy loading de imágenes.
-- Agregar control para detener otros audios cuando se reproduce uno nuevo.
-- Revisar ortografía en textos visibles como “Contactame” por “Contáctame”.
-- Revisar “Introdución” por “Introducción”.
-- Revisar “Bilingue” por “Bilingüe”.
-- Revisar “CopyRight” por “Copyright”.
-- Agregar `rel="noopener noreferrer"` en enlaces externos si abren en nueva pestaña.
-
----
-
-## 👨‍💻 Autor
+## Autor
 
 **Paulo Salazar**
+Desarrollador full-stack del proyecto.
 
-- GitHub: [@SalazarPaulo](https://github.com/SalazarPaulo)
-- Repositorio: [Portfolio_Cristina_Locutor](https://github.com/SalazarPaulo/Portfolio_Cristina_Locutor)
+* GitHub: [@SalazarPaulo](https://github.com/SalazarPaulo)
 
----
+## Créditos
 
-## 👩‍🎙️ Proyecto realizado para
+Contenido de locución, demos de voz e identidad profesional: **Cristina Granda**.
 
-**Cristina Granda**
+## Licencia
 
-Locutora profesional con servicios de voz en off para proyectos comerciales, corporativos, promocionales, narrativos y digitales.
+Proyecto desarrollado con fines profesionales y de portafolio.
 
-Redes sociales incluidas en el proyecto:
-
-- Instagram
-- Facebook
-- YouTube
-- TikTok
-
----
-
-## 📄 Licencia
-
-Este proyecto fue desarrollado con fines profesionales y de portafolio.  
-Si se desea reutilizar, modificar o distribuir, se recomienda agregar una licencia formal al repositorio.
-Nota: Axios para comunicar con el back y mostrar el front. 
-npm i axios --save
-
----
-
-## 📌 Estado del proyecto
-
-Proyecto web en desarrollo, creado como portafolio profesional de locución para Cristina Granda, utilizando React, Vite, Tailwind CSS, Framer Motion, Three.js, React Three Fiber, recursos de audio, modelo 3D y formulario de contacto con EmailJS.
+No se autoriza la reutilización de los audios, imágenes, identidad visual o contenido profesional de Cristina Granda sin autorización.
